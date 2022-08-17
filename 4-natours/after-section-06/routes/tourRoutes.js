@@ -1,7 +1,7 @@
 const express = require('express');
 const tourController = require('./../controllers/tourController');
 
-const router = express.Router();
+const router = express.Router(); // Create the router
 
 router.param('id', tourController.checkID);
 
@@ -16,4 +16,4 @@ router
   .patch(tourController.updateTour)
   .delete(tourController.deleteTour);
 
-module.exports = router;
+module.exports = router; // Export the router
